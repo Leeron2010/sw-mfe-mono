@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { UiModule } from 'libs/ui/src/lib/ui.module';
 import { FilmsRoutingModule } from './films-routing.module';
 import { FilmsComponent } from './films/films.component';
 import { FilmComponent } from './film/film.component';
@@ -13,7 +13,8 @@ import { FilmComponent } from './film/film.component';
   ],
   imports: [
     CommonModule,
-    FilmsRoutingModule
+    FilmsRoutingModule,
+    UiModule
   ]
 })
 export class FilmsModule { }

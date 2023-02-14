@@ -5,7 +5,7 @@ module.exports = withModuleFederationPlugin({
   name: 'vehicles',
 
   exposes: {
-    './Component': './apps/vehicles/src/app/app.component.ts',
+    './Module': './apps/vehicles/src/app/vehicles/vehicles.module.ts',
   },
 
   shared: {

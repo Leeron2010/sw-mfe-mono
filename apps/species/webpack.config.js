@@ -5,7 +5,7 @@ module.exports = withModuleFederationPlugin({
   name: 'species',
 
   exposes: {
-    './Component': './apps/species/src/app/app.component.ts',
+    './Module': './apps/species/src/app/species/species.module.ts',
   },
 
   shared: {

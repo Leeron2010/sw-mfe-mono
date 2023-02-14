@@ -1,16 +1,15 @@
 import { NgModule } from '@angular/core';
-import { UiComponent } from './ui.component';
-
+import { MenuPlaceHolderComponent } from './menu-place-holder/menu-place-holder.component';
 
 
 @NgModule({
   declarations: [
-    UiComponent
+    MenuPlaceHolderComponent
   ],
-  imports: [
-  ],
+  imports: [],
   exports: [
-    UiComponent
+    MenuPlaceHolderComponent
   ]
 })
-export class UiModule { }
+export class UiModule {
+}

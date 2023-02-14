@@ -1,0 +1,9 @@
+{
+  "menu": "http://localhost:5201/remoteEntry.js",
+  "films": "http://localhost:5202/remoteEntry.js",
+  "people": "http://localhost:5203/remoteEntry.js",
+  "planets": "http://localhost:5204/remoteEntry.js",
+  "species": "http://localhost:5205/remoteEntry.js",
+  "starships": "http://localhost:5206/remoteEntry.js",
+  "vehicles": "http://localhost:5207/remoteEntry.js"
+}

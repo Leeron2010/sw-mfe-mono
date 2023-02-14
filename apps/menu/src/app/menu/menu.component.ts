@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss'],
-  standalone: true
+  standalone: true,
+  imports: [RouterModule]
 })
 export class MenuComponent {
 

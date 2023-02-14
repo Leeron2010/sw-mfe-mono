@@ -5,7 +5,7 @@ module.exports = withModuleFederationPlugin({
   name: 'planets',
 
   exposes: {
-    './Component': './apps/planets/src/app/app.component.ts',
+    './Module': './apps/planets/src/app/planets/planets.module.ts',
   },
 
   shared: {

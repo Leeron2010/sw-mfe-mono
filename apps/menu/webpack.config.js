@@ -5,7 +5,7 @@ module.exports = withModuleFederationPlugin({
   name: 'menu',
 
   exposes: {
-    './Component': './apps/menu/src/app/app.component.ts',
+    './Component': './apps/menu/src/app/menu/menu.component.ts',
   },
 
   shared: {

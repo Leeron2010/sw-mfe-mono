@@ -5,7 +5,7 @@ module.exports = withModuleFederationPlugin({
   name: 'starships',
 
   exposes: {
-    './Component': './apps/starships/src/app/app.component.ts',
+    './Module': './apps/starships/src/app/starships/starships.module.ts',
   },
 
   shared: {
