@@ -17,6 +17,14 @@
     "importHelpers": true,
     "target": "ES2022",
     "module": "es2020",
+    "paths": {
+      "swapi": [
+        "dist/swapi"
+      ],
+      "ui": [
+        "dist/ui"
+      ]
+    },
     "lib": [
       "es2020",
       "dom"
