@@ -1,1 +1,5 @@
-<p>people works!</p>
+<ul *ngIf="response$ | async as response">
+  <li *ngFor="let person of response.results">
+    <a routerLink="person/{{person.id}}">{{ person.name }}</a>
+  </li>
+</ul>

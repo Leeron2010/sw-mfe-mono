@@ -34,6 +34,7 @@
 							"apps/shell/src/assets"
 						],
 						"styles": [
+              "node_modules/@heartlandone/vega/style/vega.css",
 							"apps/shell/src/styles.scss"
 						],
 						"scripts": [],
@@ -112,6 +113,7 @@
 							"apps/shell/src/assets"
 						],
 						"styles": [
+              "node_modules/@heartlandone/vega/style/vega.css",
 							"apps/shell/src/styles.scss"
 						],
 						"scripts": []
@@ -147,6 +149,7 @@
 							"apps/menu/src/assets"
 						],
 						"styles": [
+              "node_modules/@heartlandone/vega/style/vega.css",
 							"apps/menu/src/styles.scss"
 						],
 						"scripts": [],
@@ -225,6 +228,7 @@
 							"apps/menu/src/assets"
 						],
 						"styles": [
+              "node_modules/@heartlandone/vega/style/vega.css",
 							"apps/menu/src/styles.scss"
 						],
 						"scripts": []
@@ -260,6 +264,7 @@
 							"apps/films/src/assets"
 						],
 						"styles": [
+              "node_modules/@heartlandone/vega/style/vega.css",
 							"apps/films/src/styles.scss"
 						],
 						"scripts": [],
@@ -338,6 +343,7 @@
 							"apps/films/src/assets"
 						],
 						"styles": [
+              "node_modules/@heartlandone/vega/style/vega.css",
 							"apps/films/src/styles.scss"
 						],
 						"scripts": []
@@ -373,6 +379,7 @@
 							"apps/people/src/assets"
 						],
 						"styles": [
+              "node_modules/@heartlandone/vega/style/vega.css",
 							"apps/people/src/styles.scss"
 						],
 						"scripts": [],
@@ -451,6 +458,7 @@
 							"apps/people/src/assets"
 						],
 						"styles": [
+              "node_modules/@heartlandone/vega/style/vega.css",
 							"apps/people/src/styles.scss"
 						],
 						"scripts": []
@@ -486,6 +494,7 @@
 							"apps/planets/src/assets"
 						],
 						"styles": [
+              "node_modules/@heartlandone/vega/style/vega.css",
 							"apps/planets/src/styles.scss"
 						],
 						"scripts": [],
@@ -564,6 +573,7 @@
 							"apps/planets/src/assets"
 						],
 						"styles": [
+              "node_modules/@heartlandone/vega/style/vega.css",
 							"apps/planets/src/styles.scss"
 						],
 						"scripts": []
@@ -599,6 +609,7 @@
 							"apps/species/src/assets"
 						],
 						"styles": [
+              "node_modules/@heartlandone/vega/style/vega.css",
 							"apps/species/src/styles.scss"
 						],
 						"scripts": [],
@@ -677,6 +688,7 @@
 							"apps/species/src/assets"
 						],
 						"styles": [
+              "node_modules/@heartlandone/vega/style/vega.css",
 							"apps/species/src/styles.scss"
 						],
 						"scripts": []
@@ -712,6 +724,7 @@
 							"apps/starships/src/assets"
 						],
 						"styles": [
+              "node_modules/@heartlandone/vega/style/vega.css",
 							"apps/starships/src/styles.scss"
 						],
 						"scripts": [],
@@ -790,6 +803,7 @@
 							"apps/starships/src/assets"
 						],
 						"styles": [
+              "node_modules/@heartlandone/vega/style/vega.css",
 							"apps/starships/src/styles.scss"
 						],
 						"scripts": []
@@ -825,6 +839,7 @@
 							"apps/vehicles/src/assets"
 						],
 						"styles": [
+              "node_modules/@heartlandone/vega/style/vega.css",
 							"apps/vehicles/src/styles.scss"
 						],
 						"scripts": [],
@@ -903,6 +918,7 @@
 							"apps/vehicles/src/assets"
 						],
 						"styles": [
+              "node_modules/@heartlandone/vega/style/vega.css",
 							"apps/vehicles/src/styles.scss"
 						],
 						"scripts": []

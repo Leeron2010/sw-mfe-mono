@@ -1,5 +1,21 @@
-<p>films works!</p>
+<vega-flex direction="col" gap="size-32">
+  <vega-card padding="size-32">
+    <span class="v-text-primary v-font-h2">Films</span>
+  </vega-card>
 
-<lib-menu-place-holder></lib-menu-place-holder>
+  <vega-grid
+    *ngIf="films$ | async as films; else loading"
+    column="3"
+    gap="size-16">
+    <vega-card *ngFor="let movie of films.results" padding="size-16">
+      <a routerLink="film/{{movie.id}}" class="v-font-h3 v-text-link">{{ movie.title }}</a>
+      <p [innerText]="movie.opening_crawl" class="v-font-p1-long"></p>
+    </vega-card>
+  </vega-grid>
+</vega-flex>
 
-<a routerLink="1">first</a>
+<ng-template #loading>
+  <vega-card padding="size-32" class="v-text-center">
+    loading
+  </vega-card>
+</ng-template>

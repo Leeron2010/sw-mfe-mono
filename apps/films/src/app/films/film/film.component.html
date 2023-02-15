@@ -1,1 +1,62 @@
-<p>film works!</p>
+<vega-flex *ngIf="movie$ | async as movie" gap="size-16" direction="col">
+  <vega-card padding="size-32">
+    <span class="v-font-h1 v-text-primary"> {{ movie.title }} </span>
+    <p class="v-font-p1-short v-text-secondary">{{ movie.director }}</p>
+    <p class="v-font-p1-short v-text-secondary">{{ movie.producer }}</p>
+  </vega-card>
+
+  <vega-grid column="2" gap="size-16">
+    <vega-accordion (vegaExpand)="expandHandler($event, showCharactersSubject)" [expand]="false">
+      <div slot="accordion-title">Characters</div>
+      <div slot="accordion-content">
+        <ul *ngIf="characters$$ | async as characters$">
+          <li *ngFor="let character$ of characters$">
+          <span *ngIf="character$ | async as character; else loadingBar">
+            {{ character.name }}
+          </span>
+          </li>
+        </ul>
+      </div>
+    </vega-accordion>
+    <vega-accordion (vegaExpand)="expandHandler($event, showPlanetsSubject)" [expand]="false">
+      <div slot="accordion-title">Planets</div>
+      <div slot="accordion-content">
+        <ul *ngIf="planets$$ | async as planets$">
+          <li *ngFor="let planet$ of planets$">
+          <span *ngIf="planet$ | async as planet; else loadingBar">
+             {{ planet.name }}
+          </span>
+          </li>
+        </ul>
+      </div>
+    </vega-accordion>
+    <vega-accordion (vegaExpand)="expandHandler($event, showSpeciesSubject)" [expand]="false">
+      <div slot="accordion-title">Species</div>
+      <div slot="accordion-content">
+        <ul *ngIf="species$$ | async as species$">
+          <li *ngFor="let specie$ of species$">
+          <span *ngIf="specie$ | async as specie; else loadingBar">
+             {{ specie.name }}
+          </span>
+          </li>
+        </ul>
+      </div>
+    </vega-accordion>
+    <vega-accordion (vegaExpand)="expandHandler($event, showVehiclesSubject)" [expand]="false">
+      <div slot="accordion-title">Vehicles</div>
+      <div slot="accordion-content">
+        <ul *ngIf="vehicles$$ | async as vehicles$">
+          <li *ngFor="let vehicle$ of vehicles$">
+          <span *ngIf="vehicle$ | async as vehicle; else loadingBar">
+             {{ vehicle.name }}
+          </span>
+          </li>
+        </ul>
+      </div>
+    </vega-accordion>
+  </vega-grid>
+</vega-flex>
+
+<ng-template #loadingBar>
+  <vega-loading-indicator size="small" shape="bar"></vega-loading-indicator>
+</ng-template>

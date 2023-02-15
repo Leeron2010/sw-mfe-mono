@@ -2,7 +2,7 @@ import { TransformService } from './types/transform-service';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { ResponseDTO } from './types/response-dto';
 import { Response } from './types/response';
-import { map } from 'rxjs';
+import { map, of } from 'rxjs';
 
 export abstract class BaseApiService<D, T extends D>
   implements TransformService<D, T>
@@ -33,7 +33,11 @@ export abstract class BaseApiService<D, T extends D>
       );
   }
 
-  getById(id: string) {
+  getById(id?: string | null) {
+    if (!id) {
+      return of(null);
+    }
+
     return this.httpClient
       .get<D>(`${this.url}${id}`)
       .pipe(map((dto) => this.transform(dto)));

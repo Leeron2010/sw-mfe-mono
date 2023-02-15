@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
@@ -10,6 +11,7 @@ import { FilmsModule } from './films/films.module';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     RouterModule.forRoot([]),
     FilmsModule
   ],

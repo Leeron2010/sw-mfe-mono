@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BaseApiService } from '../base-api.service';
 import { getId, getIds } from '../utils';
@@ -9,6 +10,10 @@ import { VehicleDTO } from './vehicle-dto';
 })
 export class VehiclesService extends BaseApiService<VehicleDTO, Vehicle> {
   readonly url = 'https://swapi.dev/api/vehicles/';
+
+  constructor(httpClient: HttpClient) {
+    super(httpClient);
+  }
 
   transform(dto: VehicleDTO): Vehicle {
     return {
