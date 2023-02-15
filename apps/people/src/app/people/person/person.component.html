@@ -1,1 +1,5 @@
-{{ person$ | async | json }}
+<div *ngIf="person$ | async as person">
+  <vega-card>
+    <h1 class="v-font-h1 v-text-primary">{{ person.name }}</h1>
+  </vega-card>
+</div>

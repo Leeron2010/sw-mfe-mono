@@ -1,5 +1,7 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { VegaComponentModule } from '@heartlandone/vega-angular';
 
 import { PeopleRoutingModule } from './people-routing.module';
 import { PeopleComponent } from './people/people.component';
@@ -13,7 +15,9 @@ import { PersonComponent } from './person/person.component';
   ],
   imports: [
     CommonModule,
-    PeopleRoutingModule
+    PeopleRoutingModule,
+    VegaComponentModule,
+    HttpClientModule
   ]
 })
 export class PeopleModule { }

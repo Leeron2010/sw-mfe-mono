@@ -1,5 +1,43 @@
-<ul *ngIf="response$ | async as response">
-  <li *ngFor="let person of response.results">
-    <a routerLink="person/{{person.id}}">{{ person.name }}</a>
-  </li>
-</ul>
+<vega-table
+  *ngIf="response$ | async as response"
+  row-key="id"
+  [dataSource]="response.results"
+  [columns]="columns"
+  [rowExpandable]="true">
+  <div *ngFor="let person of response.results" slot="vega-table-expand-row-{{ person.id }}">
+    <vega-grid column="4" gap="size=16" class="v-p-size-16">
+      <div routerLink="/films">
+        Films: <vega-badge [text]="person.films.length"></vega-badge>
+      </div>
+
+      <div>
+        Starships: <vega-badge [text]="person.starships.length"></vega-badge>
+      </div>
+
+      <div>
+        Species: <vega-badge [text]="person.species.length"></vega-badge>
+      </div>
+
+      <div>
+        Vehicle: <vega-badge [text]="person.vehicles.length"></vega-badge>
+      </div>
+    </vega-grid>
+
+  </div>
+</vega-table>
+
+<vega-modal
+  #selectedPersonModal
+  [modalTitle]="selectedPerson?.name"
+  [showCloseButton]="true"
+  [size]="300"
+  (vegaClose)="selectedPersonClose()"
+>
+  <div> Birth year: {{ selectedPerson?.birth_year }}</div>
+  <div> Gender: {{ selectedPerson?.gender }}</div>
+  <div> Height: {{ selectedPerson?.height }}</div>
+  <div> Mass: {{ selectedPerson?.mass }}</div>
+  <div> Eye color: {{ selectedPerson?.eye_color }}</div>
+  <div> Hair color: {{ selectedPerson?.hair_color }}</div>
+  <div> Skin color: {{ selectedPerson?.skin_color }}</div>
+</vega-modal>

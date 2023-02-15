@@ -1,1 +1,11 @@
-<vega-sidenav [headerConfig]="headerConfig" [source]="menu"></vega-sidenav>
+<vega-sidenav [headerConfig]="headerConfig">
+  <vega-sidenav-link
+    *ngFor="let menuItem of menu"
+    [icon]="menuItem.icon"
+    [routerLink]="menuItem.url"
+    routerLinkActive
+    #rla="routerLinkActive"
+    [selected]="rla.isActive">
+    {{ menuItem.name }}
+  </vega-sidenav-link>
+</vega-sidenav>
