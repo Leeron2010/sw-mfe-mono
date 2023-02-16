@@ -65,7 +65,7 @@ export class PeopleComponent {
   constructor(
     private peopleService: PeopleService,
     private activatedRoute: ActivatedRoute,
-    private router: Router
+    private router: Router,
   ) {
   }
 

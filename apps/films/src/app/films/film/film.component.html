@@ -1,11 +1,11 @@
-<vega-flex *ngIf="movie$ | async as movie" gap="16" direction="col">
-  <vega-card padding="32">
+<vega-flex *ngIf="movie$ | async as movie" gap="size-16" direction="col">
+  <vega-card padding="size-32">
     <span class="v-font-h1 v-text-primary"> {{ movie.title }} </span>
     <p class="v-font-p1-short v-text-secondary">{{ movie.director }}</p>
     <p class="v-font-p1-short v-text-secondary">{{ movie.producer }}</p>
   </vega-card>
 
-  <vega-grid column="2" gap="16">
+  <vega-grid column="2" gap="size-16">
     <vega-accordion (vegaExpand)="expandHandler($event, showCharactersSubject)" [expand]="false">
       <div slot="accordion-title">Characters</div>
       <div slot="accordion-content">

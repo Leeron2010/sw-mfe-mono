@@ -1,6 +1,12 @@
 <vega-flex>
   <lib-menu-place-holder></lib-menu-place-holder>
-  <div class="v-p-size-32 v-flex-1 v-bg-page">
-    <router-outlet></router-outlet>
-  </div>
+  <vega-flex
+    direction="col"
+    gap="size-32"
+    class="v-flex-1 v-bg-page v-p-size-32">
+    <div class="v-flex-1">
+      <router-outlet></router-outlet>
+    </div>
+    <vega-app-footer />
+  </vega-flex>
 </vega-flex>
